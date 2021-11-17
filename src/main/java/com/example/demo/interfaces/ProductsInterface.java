@@ -1,0 +1,12 @@
+package com.example.demo.interfaces;
+
+import com.example.demo.models.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface ProductsInterface extends JpaRepository<Product,Long > {
+   Optional<Integer> deleteProductById(Long id);
+}
